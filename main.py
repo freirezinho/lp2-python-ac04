@@ -58,7 +58,9 @@ def main():
 
     # Um quato é designado ao paciente, e ele é internado
     print(
-        f'\nDesignando quarto {quarto_disponivel.get_numero()}, do andar número {quarto_disponivel.get_andar()} ao paciente...\n')
+        f'\nDesignando quarto....'
+        f'{quarto_disponivel.get_numero()}'
+        f'do andar número {quarto_disponivel.get_andar()} ao paciente...\n')
     novo_paciente.designar_quarto(quarto_disponivel)
     novo_paciente.internar_paciente(True)
 
@@ -67,7 +69,9 @@ def main():
     hoje = str(datetime.now().date())
     horario_atual = str(datetime.now().time())
     observacao_a_escrever = 'O paciente chegou com taquicardia.'
-    assinatura_medico = f'{medico_padrao.get_nome()} | {medico_padrao.get_crm()}'
+    nome_medico = medico_padrao.get_nome()
+    crm_medico = medico_padrao.get_crm()
+    assinatura_medico = f'{nome_medico} | {crm_medico}'
 
     # Registramos o histórico ao paciente
     print('\nCriando registro no histórico...\n')
@@ -78,7 +82,7 @@ def main():
         medico=assinatura_medico)
     print('\nBuscando todos os registros do histórico...\n')
     print('--------------------------')
-    print('Todos os registros do Histórico')
+    print('Registros do Histórico')
     novo_paciente.get_historico()
 
 

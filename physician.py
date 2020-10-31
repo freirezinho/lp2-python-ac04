@@ -7,7 +7,16 @@ class Medico(Pessoa):
     __salario: int = 0
     __especialidades: [str] = []
 
-    def __init__(self, nome: str, rg: str, cpf: str, crm: str, telefone: str, salario: int, especialidades: [str]):
+    def __init__(
+        self,
+        nome: str,
+        rg: str,
+        cpf: str,
+        crm: str,
+        telefone: str,
+        salario: int,
+        especialidades: [str]
+    ):
         super().__init__(nome, rg, cpf, telefone)
         self.__crm = crm
         self.__salario = salario

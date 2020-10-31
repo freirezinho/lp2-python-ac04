@@ -13,7 +13,16 @@ class Paciente(Pessoa):
     __quarto: Quarto = None
     __responsavel: Medico = None
 
-    def __init__(self, nome: str, rg: str, cpf: str, endereco: str, telefone: str, data_nascimento: str, responsavel: Medico):
+    def __init__(
+        self,
+        nome: str,
+        rg: str,
+        cpf: str,
+        endereco: str,
+        telefone: str,
+        data_nascimento: str,
+        responsavel: Medico
+    ):
         super().__init__(nome, rg, cpf, telefone)
         self.__endereco = endereco
         self.__data_nascimento = data_nascimento
@@ -25,15 +34,21 @@ class Paciente(Pessoa):
     def internar_paciente(self, valor: bool) -> None:
         self.__internado = valor
 
-    def registrar_historico(self, data: str, horario: str, observacao: str, medico: str) -> None:
+    def registrar_historico(
+        self,
+        data: str,
+        horario: str,
+        observacao: str,
+        medico: str
+    ) -> None:
         novo_registro = Historico(data, horario, observacao, medico)
         self.__historico.append(novo_registro)
 
     def get_historico(self):
         for registro in self.__historico:
             print("--------------------------")
-            print(
-                f'Data e horário do registro: {registro.data} | {registro.horario}')
+            print('Data e horário do registro:')
+            print(f'{registro.data} | {registro.horario}')
             print(f'\nObservação: {registro.observacao}')
             print(f'\nMédico: {registro.medico}')
             print("--------------------------")
