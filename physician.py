@@ -7,7 +7,7 @@ class Medico(Pessoa):
     __salario: int = 0
     __especialidades: [str] = []
 
-    def __init__(self, nome: str, rg: str, cpf: str, crm: str, telefone: str, salario: int, especialidades: list[str]):
+    def __init__(self, nome: str, rg: str, cpf: str, crm: str, telefone: str, salario: int, especialidades: [str]):
         super().__init__(nome, rg, cpf, telefone)
         self.__crm = crm
         self.__salario = salario
@@ -23,12 +23,12 @@ class Medico(Pessoa):
             return ''
 
     def get_nome(self) -> str:
-        return self.__nome
+        return super().get_nome()
 
     def get_salario(self) -> int:
         return self.__salario
 
-    def get_todas_especialidades(self) -> list[str]:
+    def get_todas_especialidades(self) -> [str]:
         return self.__especialidades
 
     def set_nova_especialidade(self, especialidade: str):
@@ -40,7 +40,7 @@ class Medico(Pessoa):
     def edit_crm(self, crm: str) -> None:
         self.__crm = crm
 
-    def substituir_especialidades(self, especialidades: list[str]):
+    def substituir_especialidades(self, especialidades: [str]):
         self.__especialidades = especialidades
 
     def remover_especialidade(self, especialidade: str) -> None:

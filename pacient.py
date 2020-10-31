@@ -8,7 +8,7 @@ class Paciente(Pessoa):
 
     __data_de_nascimento: str = ''
     __endereco: str = ''
-    __historico: list[Historico] = []
+    __historico: [Historico] = []
     __internado: bool = False
     __quarto: Quarto = None
     __responsavel: Medico = None
@@ -30,10 +30,14 @@ class Paciente(Pessoa):
         self.__historico.append(novo_registro)
 
     def get_historico(self):
-        print("--------------------------")
         for registro in self.__historico:
-            print(registro)
-        print("--------------------------")
+            print("--------------------------")
+            print(f'{registro.data} | {registro.horario}')
+            print("--------------------------")
+
+            print(f'Observação: {registro.observacao}')
+            print(f'Médico: {registro.medico}')
+            print("--------------------------")
 
     def trocar_medico_responsavel(self, medico: Medico) -> None:
         self.__responsavel = medico

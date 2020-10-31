@@ -13,3 +13,6 @@ class Pessoa(ABC):
         self.__rg = rg
         self.__cpf = cpf
         self.__telefone = telefone
+
+    def get_nome(self):
+        return self.__nome
