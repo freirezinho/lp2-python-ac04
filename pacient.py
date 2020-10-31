@@ -6,7 +6,7 @@ from room import Quarto
 
 class Paciente(Pessoa):
 
-    __data_de_nascimento: str = ''
+    __data_nascimento: str = ''
     __endereco: str = ''
     __historico: [Historico] = []
     __internado: bool = False
@@ -48,44 +48,20 @@ class Paciente(Pessoa):
         self.__responsavel = None
         self.__internado = True
 
-    def get_nome(self):
-        return self.nome
-
-    def set_nome(self):
-        self.nome
-
-    def get_rg(self):
-        return self.rg
-
-    def set_rg(self):
-        self.rg
-
-    def get_cpf(self):
-        return self.cpf
-
-    def set_cpf(self):
-        self.cpf
-
     def get_endereco(self):
-        return self.endereco
+        return self.__endereco
 
-    def set_endereco(self):
-        self.endereco
-
-    def get_telefone(self):
-        return self.telefone
-
-    def set_telefone(self):
-        self.telefone
+    def set_endereco(self, endereco: str):
+        self.__endereco = endereco
 
     def get_data_nascimento(self):
-        return self.data_nascimento
+        return self.__data_nascimento
 
-    def set_data_nacimento(self):
-        self.data_nascimento
+    def set_data_nacimento(self, data_nacimento: str):
+        self.data_nascimento = data_nacimento
 
     def get_responsavel(self):
-        return self.responsavel
+        return self.__responsavel
 
-    def set_responsavel(self):
-        self.responsavel
+    def set_responsavel(self, medico: Medico):
+        self.__responsavel = medico

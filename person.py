@@ -16,3 +16,24 @@ class Pessoa(ABC):
 
     def get_nome(self):
         return self.__nome
+
+    def get_rg(self):
+        return self.__rg
+
+    def get_cpf(self):
+        return self.__cpf
+
+    def get_telefone(self):
+        return self.__telefone
+
+    def set_nome(self, nome: str):
+        self.__nome = nome
+
+    def set_rg(self, rg: str):
+        self.__rg = rg
+
+    def set_cpf(self, cpf: str):
+        self.cpf = cpf
+
+    def set_telefone(self, telefone: str):
+        self.__telefone = telefone
