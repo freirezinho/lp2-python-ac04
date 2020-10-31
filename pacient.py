@@ -48,3 +48,45 @@ class Paciente(Pessoa):
         self.__quarto = None
         self.__responsavel = None
         self.__internado = True
+
+    def get_nome(self):
+        return self.nome
+
+    def set_nome(self):
+        self.nome
+
+    def get_rg(self):
+        return self.rg
+
+    def set_rg(self):
+        self.rg
+
+    def get_cpf(self):
+        return self.cpf
+
+    def set_cpf(self):
+        self.cpf
+
+    def get_endereco(self):
+        return self.endereco
+
+    def set_endereco(self):
+        self.endereco
+
+    def get_telefone(self):
+        return self.telefone
+
+    def set_telefone(self):
+        self.telefone
+
+    def get_data_nascimento(self):
+        return self.data_nascimento
+
+    def set_data_nacimento(self):
+        self.data_nascimento
+
+    def get_responsavel(self):
+        return self.responsavel
+
+    def set_responsavel(self):
+        self.responsavel
