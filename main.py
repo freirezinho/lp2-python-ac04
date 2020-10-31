@@ -42,8 +42,8 @@ def main():
 
     # Preparamos os dados do histórico
 
-    hoje = str(datetime.now().date)
-    horario_atual = str(datetime.now().time)
+    hoje = str(datetime.now().date())
+    horario_atual = str(datetime.now().time())
     observacao_a_escrever = 'O paciente chegou com taquicardia.'
     assinatura_medico = f'{medico_padrao.get_nome()} | {medico_padrao.get_crm()}'
 

@@ -32,11 +32,10 @@ class Paciente(Pessoa):
     def get_historico(self):
         for registro in self.__historico:
             print("--------------------------")
-            print(f'{registro.data} | {registro.horario}')
-            print("--------------------------")
-
-            print(f'Observação: {registro.observacao}')
-            print(f'Médico: {registro.medico}')
+            print(
+                f'Data e horário do registro: {registro.data} | {registro.horario}')
+            print(f'\nObservação: {registro.observacao}')
+            print(f'\nMédico: {registro.medico}')
             print("--------------------------")
 
     def trocar_medico_responsavel(self, medico: Medico) -> None:
